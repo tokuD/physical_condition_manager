@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>ユーザー一覧</h2>
+{% for user in object_list %}
+    <p><a href="{% url 'body_temparature:detail' user.pk %}">{{ user }}</a></p>
+{% endfor %}
+
+{% endblock %}

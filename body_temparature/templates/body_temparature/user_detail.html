@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ user }}の体温</h2>
+<table>
+    <tr>
+        <th>日付</th>
+        <th>体温</th>
+    </tr>
+    {% for object in object_list %}
+    <tr>
+        <td>{{ object.day }}</td>
+        <td>{{ object.body_temp }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
